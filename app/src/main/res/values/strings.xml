@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">LOGIN-LAU</string>
+    <string name="valorTxtTexto1">Ingrese con su usuario</string>
+    <string name="valorETextUsuario">Usuario</string>
+    <string name="valorETxtContra">Contraseña</string>
+    <string name="valorBtnIngresar">Ingresar</string>
+    <string name="valorBtnOlvidoContra">Olvide mi contraseña</string>
+    <string name="title_activity_acerca_de">AcercaDeActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="valorETxtBuscar">Buscar</string>
+    <string name="valorTxtTitulo">LAU CHUN Express</string>
+    <string name="valorTxtTodasCategorias">Todas las categorias</string>
+    <string name="valorTxtProductosMV">Productos mas vendidos</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imgFlecha"
+        android:layout_width="55dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flecha_pequena_izquierda" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="270dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFlecha"
+        app:srcCompat="@drawable/logo_lauchun_white" />
+
+    <TextView
+        android:id="@+id/txtTexto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/valorTxtTexto1"
+        android:textColor="#1B1A1A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <EditText
+        android:id="@+id/eTextUsuario"
+        android:layout_width="288dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_usuario"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/valorETextUsuario"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:textColorHint="#C9FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto1" />
+
+    <EditText
+        android:id="@+id/eTxtContra"
+        android:layout_width="288dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_candado"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/valorETxtContra"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:textColorHint="#C9FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTextUsuario" />
+
+    <Button
+        android:id="@+id/btnOlvidoContra"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/cabin_medium"
+        android:text="@string/valorBtnOlvidoContra"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTxtContra"
+        app:rippleColor="#A829D884"
+        app:strokeColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="339dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#29D884"
+        android:fontFamily="@font/cabin"
+        android:text="@string/valorBtnIngresar"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOlvidoContra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
