@@ -11,6 +11,8 @@ import com.sigo.login_lau.Adaptadores.AdaptadorProductosMasVendidos;
 import com.sigo.login_lau.Adaptadores.AdaptadorTodasCategorias;
 import com.sigo.login_lau.Modelos.ProductosMasVendidos;
 import com.sigo.login_lau.Modelos.TodasCategorias;
+import com.sigo.login_lau.databinding.ActivityCatalogoBinding;
+import com.sigo.login_lau.databinding.CategoriasItemsBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +27,18 @@ public class CatalogoActivity extends AppCompatActivity {
     AdaptadorProductosMasVendidos adaptadorProductosMasVendidos;
     List<ProductosMasVendidos> productosMasVendidosList;
 
+    ActivityCatalogoBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catalogo);
+        binding = ActivityCatalogoBinding.inflate(getLayoutInflater());
+        //setContentView(R.layout.activity_catalogo);
+        setContentView(binding.getRoot());
 
-        CategoriasRecyclerView = findViewById(R.id.rvCategorias);
-        ProductosRecyclerView = findViewById(R.id.rvProductosMV);
+
+        //CategoriasRecyclerView = findViewById(R.id.rvCategorias);
+        //ProductosRecyclerView = findViewById(R.id.rvProductosMV);
 
         //ITEMS DE CATEGORIA
         todasCategoriasList = new ArrayList<>();
@@ -57,16 +64,16 @@ public class CatalogoActivity extends AppCompatActivity {
     //CATEGORIA
     private void setTodasCategoriasRecycler(List<TodasCategorias> dataListCateg) {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,3);
-        CategoriasRecyclerView.setLayoutManager(layoutManager);
+        binding.rvCategorias.setLayoutManager(layoutManager);
         adaptadorTodasCategorias = new AdaptadorTodasCategorias(this,dataListCateg);
-        CategoriasRecyclerView.setAdapter(adaptadorTodasCategorias);
+        binding.rvCategorias.setAdapter(adaptadorTodasCategorias);
     }
 
     //PRODUCTOS
     private void setProductoMVRecycler(List<ProductosMasVendidos> dataList) {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        ProductosRecyclerView.setLayoutManager(layoutManager);
+        binding.rvProductosMV.setLayoutManager(layoutManager);
         adaptadorProductosMasVendidos = new AdaptadorProductosMasVendidos(this,dataList);
-        ProductosRecyclerView.setAdapter(adaptadorProductosMasVendidos);
+        binding.rvProductosMV.setAdapter(adaptadorProductosMasVendidos);
     }
 }

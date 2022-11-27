@@ -1,6 +1,7 @@
 package com.sigo.login_lau.Adaptadores;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +10,10 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sigo.login_lau.CategoriaListaActivity;
 import com.sigo.login_lau.Modelos.TodasCategorias;
 import com.sigo.login_lau.R;
+import com.sigo.login_lau.databinding.CategoriasItemsBinding;
 
 import java.util.List;
 
@@ -28,14 +31,20 @@ public class AdaptadorTodasCategorias extends RecyclerView.Adapter<AdaptadorToda
     @Override
     public CategoriaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.categorias_items, parent, false);
-        return new CategoriaViewHolder(view);
+        return new CategoriaViewHolder(CategoriasItemsBinding.inflate(LayoutInflater.from(parent.getContext()),parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoriaViewHolder holder, int position) {
 
-        holder.categoriaImagenView.setImageResource(todasCategoriasList.get(position).getCategoria());
+        holder.binding.imgCateUtiles.setImageResource(todasCategoriasList.get(position).getCategoria());
+        holder.binding.contenedor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentcategoria = new Intent(context, CategoriaListaActivity.class);
+                context.startActivity(intentcategoria);
+            }
+        });
     }
 
     @Override
@@ -45,12 +54,11 @@ public class AdaptadorTodasCategorias extends RecyclerView.Adapter<AdaptadorToda
 
     public static class CategoriaViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView categoriaImagenView;
+        CategoriasItemsBinding binding;
 
-        public CategoriaViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            categoriaImagenView = itemView.findViewById(R.id.imgCateUtiles);
+        public CategoriaViewHolder(CategoriasItemsBinding itemView) {
+            super(itemView.getRoot());
+            binding = itemView;
         }
     }
 }
