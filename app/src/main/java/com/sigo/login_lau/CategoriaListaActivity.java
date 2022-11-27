@@ -1,6 +1,8 @@
 package com.sigo.login_lau;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,7 +13,7 @@ import com.sigo.login_lau.databinding.ActivityCategoriaListaBinding;
 
 import java.util.ArrayList;
 
-public class CategoriaListaActivity extends AppCompatActivity {
+public class CategoriaListaActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ActivityCategoriaListaBinding binding;
 
@@ -55,5 +57,13 @@ public class CategoriaListaActivity extends AppCompatActivity {
         AdaptadorProductosEnCategoria adapter = new AdaptadorProductosEnCategoria(lista, CategoriaListaActivity.this);
 
         binding.rvAndroid.setAdapter(adapter);
+
+        binding.imgRegresar.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intentdetalle = new Intent(this, CatalogoActivity.class);
+        startActivity(intentdetalle);
     }
 }

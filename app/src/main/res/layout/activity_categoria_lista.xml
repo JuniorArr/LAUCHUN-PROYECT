@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgRegresar"
         android:layout_width="43dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"

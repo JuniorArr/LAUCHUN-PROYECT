@@ -1,13 +1,15 @@
 package com.sigo.login_lau;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sigo.login_lau.Modelos.ProductosEnCategoria;
 import com.sigo.login_lau.databinding.ActivityDetalleProductosBinding;
 
-public class DetalleProductosActivity extends AppCompatActivity {
+public class DetalleProductosActivity extends AppCompatActivity implements View.OnClickListener{
 
     ActivityDetalleProductosBinding binding;
 
@@ -25,6 +27,14 @@ public class DetalleProductosActivity extends AppCompatActivity {
             binding.txtNombreDetalle.setText(objAndroid.getNombre());
             binding.txtDescripcionDetalle.setText(objAndroid.getDescripcion());
             binding.txtPrecioDetalle.setText(objAndroid.getPrecio());
+            binding.imgback.setOnClickListener(this);
+
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent intentdetalle = new Intent(this, CategoriaListaActivity.class);
+        startActivity(intentdetalle);
     }
 }
