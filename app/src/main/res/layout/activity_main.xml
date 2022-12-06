@@ -22,7 +22,7 @@
 
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="256dp"
         android:backgroundTint="#29D884"
         android:fontFamily="@font/cabin"
         android:text="Comenzar"
@@ -38,14 +38,14 @@
         android:id="@+id/txtTexto1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/cabin"
-        android:text="@string/Bienvenido"
+        android:text="Bienvenido, te hemos extrañado."
         android:textColor="#1B1A1A"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
 
@@ -53,11 +53,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="337dp"
+        android:layout_marginTop="104dp"
         android:text="Designed by Lauchun development team"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresarL" />
 
@@ -65,9 +65,9 @@
         android:id="@+id/imageView"
         android:layout_width="45dp"
         android:layout_height="47dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresarL"
         app:srcCompat="@drawable/logo_lauchun_movil" />

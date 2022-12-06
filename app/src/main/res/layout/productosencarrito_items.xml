@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvContenedor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="387dp"
+        android:layout_height="190dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/imgProdCarrito"
+            android:layout_width="142dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/txtMarcaCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/cabin_medium"
+            android:text="ARTESCO"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.905"
+            app:layout_constraintStart_toEndOf="@+id/imgProdCarrito"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNombreProdCarr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="LIMPIATIPO STICKY TAC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgProdCarrito"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarcaCarrito" />
+
+        <TextView
+            android:id="@+id/txtPrecioCarrito"
+            android:layout_width="61dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/cabin_medium"
+            android:text="2.00"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.194"
+            app:layout_constraintStart_toEndOf="@+id/imgProdCarrito"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombreProdCarr" />
+
+        <LinearLayout
+            android:layout_width="153dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPrecioCarrito">
+
+            <ImageView
+                android:id="@+id/imgBtnMenosCarr"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/boton_menos" />
+
+            <TextView
+                android:id="@+id/txtCantidadContadorCarr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgBtnMasCarr"
+                android:layout_width="45dp"
+                android:layout_height="43dp"
+                app:srcCompat="@drawable/boton_mas" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

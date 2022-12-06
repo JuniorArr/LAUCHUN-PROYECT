@@ -4,12 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
     tools:context=".DetalleProductosActivity">
 
     <ImageView
+        android:id="@+id/imgRegresarDetalle"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgDetalle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flecha_pequena_izquierda" />
+
+    <ImageView
+        android:id="@+id/imgCarritoDetalle"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imgRegresarDetalle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/carrito_de_compras" />
+
+    <ImageView
         android:id="@+id/imgDetalle"
-        android:layout_width="261dp"
-        android:layout_height="197dp"
+        android:layout_width="332dp"
+        android:layout_height="204dp"
         android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
@@ -24,6 +50,7 @@
         android:layout_marginTop="8dp"
         android:text="ARTESCO"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,74 +62,98 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="LIMPIATIPO STICKY TAC"
+        android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txrMarcaDetalle" />
 
+    <ImageView
+        android:id="@+id/imgBarraDetalle"
+        android:layout_width="93dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreDetalle"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
+
     <TextView
         android:id="@+id/txtDescripcionDetalle"
         android:layout_width="285dp"
         android:layout_height="104dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Colores surtidos, removible y fácil de manipular."
+        android:textColor="#323030"
         android:textSize="19dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreDetalle" />
+        app:layout_constraintTop_toBottomOf="@+id/imgBarraDetalle" />
 
     <TextView
         android:id="@+id/txtPrecioDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_width="79dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
         android:text="2.00"
-        android:textSize="17sp"
+        android:textColor="#F11818"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescripcionDetalle" />
 
-    <ImageView
-        android:id="@+id/imgback"
-        android:layout_width="59dp"
-        android:layout_height="59dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgDetalle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/flecha_pequena_izquierda" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="52dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="153dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imgback"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/carrito_de_compras" />
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toEndOf="@+id/txtPrecioDetalle"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionDetalle">
+
+        <ImageView
+            android:id="@+id/imgBotonMenos"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/boton_menos" />
+
+        <TextView
+            android:id="@+id/txtCantidadContador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgBotonMas"
+            android:layout_width="45dp"
+            android:layout_height="43dp"
+            app:srcCompat="@drawable/boton_mas" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="92dp"
-        android:text="Button"
+        android:id="@+id/btnAgregarCarrito"
+        android:layout_width="313dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#67A36A"
+        android:text="Agregar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrecioDetalle" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="36dp"
-        android:text="Button"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPrecioDetalle" />
 

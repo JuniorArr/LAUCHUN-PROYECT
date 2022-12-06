@@ -19,4 +19,10 @@
     <string name="valorTxtTodasCategorias">Todas las categorias</string>
     <string name="valorTxtProductosMV">Productos mas vendidos</string>
     <string name="Bienvenido">Bienvenido querido Usuario</string>
+    <string name="valorETxtNombre">Ingrese su nombre</string>
+    <string name="valorETxtApellidos">Ingrese sus apellidos</string>
+    <string name="valorETxtCorreo">Ingrese su correo</string>
+    <string name="valorETxtDNI">Ingrese su DNI</string>
+    <string name="valorETxtTelefono">Ingrese su telefono</string>
+    <string name="title_activity_boleta">BoletaActivity</string>
 </resources>
